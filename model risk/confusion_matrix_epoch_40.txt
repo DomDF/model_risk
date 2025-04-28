@@ -1,5 +1,0 @@
-Confusion Matrix (Epoch 40):
-100 0 0 0
-9 88 3 0
-10 0 90 0
-9 1 3 87
