@@ -1,5 +1,0 @@
-True,Pred_no anomaly,Pred_anomaly type 1,Pred_anomaly type 2,Pred_anomaly type 3
-no anomaly,600,0,0,0
-anomaly type 1,1,762,2,0
-anomaly type 2,0,0,632,0
-anomaly type 3,0,1,0,445
