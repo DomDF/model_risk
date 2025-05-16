@@ -1,9 +1,12 @@
 # Ignore all .csv files
 *.csv
+*.png
 
 # Ignore specific plot script files
 plots.R
 plots.py
+weld_classification_reduced.py
+weld_classification.py
 
 # Ignore specific folders
 weld_classification/Dataset_partitioned/
