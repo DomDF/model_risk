@@ -1,6 +1,7 @@
 # Is Your Model Risk ALARP?
 
 This repository is associated with a research paper that has been submitted to...
+
 The preprint is available here: [link to arxiv]
  
 ## Abstract:
@@ -14,6 +15,6 @@ If the safety of physical infrastructure becomes tied to statistical models, the
 ## Selected Figures
 
 Figure 1: Example images of various types from the weld radiograph dataset
+<img width="1010" alt="image" src="https://github.com/user-attachments/assets/e849642f-af65-4296-8e7e-4eff30e1238b" />
 
-![Figure 1](Figures/weld_radiographs.pdf)
 
