@@ -1,0 +1,30 @@
+# Ignore all .csv files
+*.csv
+
+# Ignore specific plot script files
+plots.R
+plots.py
+
+# Ignore specific folders
+weld_classification/Dataset_partitioned/
+weld_classification/DB - Copy/
+
+# macOS specific
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.Spotlight-V100
+.Trashes
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
