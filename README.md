@@ -14,7 +14,16 @@ If the safety of physical infrastructure becomes tied to statistical models, the
 
 ## Selected Figures
 
-Figure 1: Example images of various types from the weld radiograph dataset
+Figure 1:
 <img width="1010" alt="image" src="https://github.com/user-attachments/assets/e849642f-af65-4296-8e7e-4eff30e1238b" />
+
+Figure 5:
+<img width="1048" alt="image" src="https://github.com/user-attachments/assets/0d031cdf-00b1-4cfd-b914-b86ef85c8a01" />
+
+Figure 6:
+<img width="1100" alt="image" src="https://github.com/user-attachments/assets/a86532ac-caa1-402a-a0e3-77897a16a745" />
+
+Figure 9:
+<img width="1011" alt="image" src="https://github.com/user-attachments/assets/92eb8a56-c376-4e5a-b401-3c65c7e11c03" />
 
 
