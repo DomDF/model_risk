@@ -1,0 +1,65 @@
+\documentclass[tikz, border=5mm]{standalone}
+\usepackage{tikz}
+\usepackage{helvet} % For sans-serif font
+\renewcommand{\familydefault}{\sfdefault} % Set sans-serif as default
+
+\usetikzlibrary{
+    shapes.geometric,
+    positioning,    % Allows for relative positioning
+    arrows.meta     % For arrow tip styles
+}
+
+\begin{document}
+
+\tikzset{
+    decision/.style={rectangle, draw=blue!80!black, thick, fill=blue!20,
+                     text centered, minimum height=1.2cm, text width=2.5cm, align=center, font=\sffamily},
+    chance/.style={ellipse, draw=green!80!black, thick, fill=green!20,
+                   text centered, minimum height=1.2cm, text width=2.4cm, align=center, font=\sffamily},
+    value/.style={diamond, draw=orange!90!black, thick, fill=orange!20,
+                  text centered, minimum height=1.2cm, text width=2cm, aspect=1.2, align=center, font=\sffamily},
+    arr/.style={->, >=Latex, thick}
+}
+
+\begin{tikzpicture}[node distance=1.8cm and 1.5cm] % y-distance and x-distance
+
+    % Column 1: Initial Decision
+    \node[decision] (d1) {radiograph\\evalaution\\ method};
+
+    % Column 2: Connected to D1
+    \node[value,    below right=1.5cm and 0.5cm of d1] (ac) {evaluation\\costs}; % Increased 'below' distance
+    \node[chance,   above right=0.7cm and 0.3cm of d1] (theta) {model\\parameters $\theta$};
+
+    % Column 3: True State & Model Prediction
+    \node[chance,   right=1.8cm of theta] (s) {true state,\\(scenario), $s$};
+    % Position s_hat to be more compact; relative to theta
+    \node[chance,   below=1.3cm of theta, xshift=1.2cm] (s_hat) {model\\prediction, $\hat{s}$};
+
+    % Column 4: Second Decision
+    \node[decision, right=1.2cm of s_hat] (d2) {approve\\weld?};
+
+    % Column 5: Final Cost Node
+    \node[value,    right=1.2cm of d2] (rc) {repair\\costs};
+
+    % Arrows:
+
+    % d1 ("radiograph eval method") influences:
+    \draw[arr] (d1) -- (ac);
+    \draw[arr] (d1) -- (theta);
+
+    % Model Prediction (s_hat) generation:
+    \draw[arr] (theta) -- (s_hat);
+    \draw[arr] (s) -- (s_hat);
+
+    % Information for d2 ("approve weld?"):
+    \draw[arr] (s_hat) -- (d2);
+
+    % d2 ("approve weld?") influences:
+    \draw[arr] (d2) -- (rc);
+
+    % True State (s) influences repair costs:
+    \draw[arr] (s.east) .. controls +(east:0.8cm) and +(north:0.8cm) .. (rc.north);
+
+\end{tikzpicture}
+
+\end{document}
